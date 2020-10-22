@@ -47,6 +47,17 @@ public class ArrayOps {
 		return output;
 	}
 
+	//Returns the list of the sum of each col in a 2d array
+	public static int[] sumCols(int[][] matrix) {
+		int[] output = new int[matrix[0].length];
+		for (int col = 0; col<matrix[0].length; col++) {
+			for (int row = 0; row<matrix.length; row++) {
+				output[col] += matrix[row][col];
+			}
+		}
+		return output;
+	}
+
 
 	//Returns true if each row of a 2d array are equal
 	public static boolean isRowMagic(int[][] matrix) {
@@ -82,7 +93,7 @@ public class ArrayOps {
 
 
 
-	//Returns true if the sum of a specific row is equal to the sum of a specific col
+	//Returns true if the sum of a specific row is equal to the sum of a specific col 
 	public static boolean isLocationMagic(int[][] matrix, int row, int col) {
 		int rowSum = sum(matrix[row]);
 		int colSum = 0;
