@@ -46,4 +46,15 @@ public class ArrayOps {
 		return output;
 	}
 
+
+	public static boolean isRowMagic(int[][] matrix) {
+		int rowSum = sum(matrix[0]);
+		for (int row = 0;row<matrix.length;row++) {
+			if (sum(matrix[row])!=rowSum) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 }
