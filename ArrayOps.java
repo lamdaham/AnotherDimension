@@ -1,6 +1,6 @@
 public class ArrayOps {
 
-
+	//Returns the sum of a 1d array
 	public static int sum(int[] arr) {
 		int output = 0;
 		for (int i = 0; i<arr.length; i++) {
@@ -9,7 +9,7 @@ public class ArrayOps {
 		return output;
 	}
 
-
+	//Returns the largest value in 1d arraw
 	public static int largest(int[]arr) {
 		int output = arr[0];
 		for (int i = 0; i<arr.length; i++) {
@@ -20,7 +20,7 @@ public class ArrayOps {
 		return output;
 	}
 
-
+	//Returns a 1d array of all the sums of each row in a 2d array
 	public static int[] sumRows(int[][] matrix) {
 		int[] output = new int[matrix.length];
 		for (int rows = 0; rows<matrix.length; rows++) {
@@ -29,7 +29,7 @@ public class ArrayOps {
 		return output;
 	}
 
-
+	//Returns a 1d array of all the largest values in each row of a 2d array
 	public static int[] largestInRows(int[][] matrix) {
 		int[] output = new int[matrix.length];
 		for (int rows = 0; rows<matrix.length; rows++) {
@@ -38,6 +38,7 @@ public class ArrayOps {
 		return output;
 	}
 
+	//Returns the sum of all values in a 2d array
 	public static int sum(int[][] arr) {
 		int output = 0;
 		for (int rows = 0; rows<arr.length; rows++) {
@@ -47,6 +48,7 @@ public class ArrayOps {
 	}
 
 
+	//Returns true if each row of a 2d array are equal
 	public static boolean isRowMagic(int[][] matrix) {
 		int rowSum = sum(matrix[0]);
 		for (int row = 0;row<matrix.length;row++) {
@@ -58,6 +60,7 @@ public class ArrayOps {
 	}
 
 
+	//Returns true if each col of a 2d array are equal
 	public static boolean isColMagic(int[][] matrix) {
 		boolean first = true;
 		int finalSum = 0;
@@ -78,6 +81,8 @@ public class ArrayOps {
 	}
 
 
+
+	//Returns true if the sum of a specific row is equal to the sum of a specific col
 	public static boolean isLocationMagic(int[][] matrix, int row, int col) {
 		int rowSum = sum(matrix[row]);
 		int colSum = 0;
