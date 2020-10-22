@@ -1,4 +1,6 @@
 public class ArrayOps {
+
+
 	public static int sum(int[] arr) {
 		int output = 0;
 		for (int i = 0; i<arr.length; i++) {
@@ -6,6 +8,8 @@ public class ArrayOps {
 		}
 		return output;
 	}
+
+
 	public static int largest(int[]arr) {
 		int output = arr[0];
 		for (int i = 0; i<arr.length; i++) {
@@ -15,4 +19,14 @@ public class ArrayOps {
 		}
 		return output;
 	}
+
+
+	public static int[] sumRows(int[][] matrix) {
+		int[] output = new int[matrix.length];
+		for (int rows = 0; rows<matrix.length; rows++) {
+			output[rows] = sum(matrix[rows]);
+		}
+		return output;
+	}
+
 }
